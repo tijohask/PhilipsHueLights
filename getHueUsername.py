@@ -4,7 +4,11 @@
 
 import requests
 
-address = "http://192.168.2.105/api"
+url = requests.get( "https://www.meethue.com/api/nupnp" ).text
+urldata = json.loads( url )
+address = urldata[0]["internalipaddress"]
+
+address = "http://" + address + "/api"
 
 data = {"devicetype": "Light Control#Laptop"}
 
