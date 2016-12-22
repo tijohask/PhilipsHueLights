@@ -24,6 +24,7 @@ print( json.dumps( data, indent=4, sort_keys=True ) )
 
 for item in data:
 	print( )
+	print( item )
 	print( data[item]["name"] )
 	print( "Reachable: " + str( data[item]["state"]["reachable"] ) )
 	print( "On: " + str( data[item]["state"]["on"] ) )
